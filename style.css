@@ -377,37 +377,42 @@ body {
 .services-section {
     background-color: #ffffff;
     color: #333;
-    padding: 6rem 8rem 6rem 4rem;
+    padding: 10rem 8rem 6rem 4rem;
     /* Right padding more to account for fixed tools */
 }
 
 .services-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 5rem;
-    gap: 4rem;
+    position: relative;
+    margin-bottom: 10rem;
+    display: block;
 }
 
 .services-title {
-    font-size: 2.8rem;
-    font-weight: 700;
-    line-height: 1.25;
-    flex: 1.5;
-    letter-spacing: -0.5px;
-    color: #222;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    color: #2a2a2a;
+    margin: 0;
+    padding-left: 3.5rem;
 }
 
 .services-title .highlight {
-    color: var(--primary-orange);
+    color: #fdb131;
 }
 
 .services-desc {
-    flex: 1;
-    color: #666;
+    position: absolute;
+    right: 0;
+    bottom: -80px;
+    width: 45%;
+    color: #999;
     font-size: 0.95rem;
     line-height: 1.8;
-    margin-top: 5rem;
+}
+
+.services-desc p {
+    margin: 0;
 }
 
 .services-grid {
@@ -418,7 +423,7 @@ body {
 }
 
 .service-card {
-    padding: 3.5rem 2.5rem;
+    padding: 5rem 2.5rem;
     border-right: 1px solid #eaeaea;
     border-bottom: 1px solid #eaeaea;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -757,8 +762,9 @@ body {
 }
 
 .story-stats {
-    display: flex;
-    gap: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem 4rem;
 }
 
 .stat-item {
@@ -768,7 +774,7 @@ body {
 }
 
 .stat-number {
-    font-size: 5rem;
+    font-size: 3.5rem;
     font-weight: 500;
     color: #222;
     line-height: 1;
@@ -828,7 +834,7 @@ body {
 
 .testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-bottom: 4rem;
 }
