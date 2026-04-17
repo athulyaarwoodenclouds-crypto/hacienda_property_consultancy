@@ -67,7 +67,7 @@ body {
 }
 
 .logo img {
-    height: 80px;
+    height: 60px;
     width: auto;
     object-fit: contain;
 }
@@ -170,7 +170,7 @@ body {
     line-height: 0.95em;
     font-weight: 450;
     margin-bottom: 2rem;
-    letter-spacing: -1.5px;
+    letter-spacing: 0.5px;
 }
 
 .main-title .highlight {
@@ -481,8 +481,7 @@ body {
 /* --- Transform Spaces Section --- */
 .transform-section {
     background-color: #ffffff;
-    padding: 2rem 8rem 6rem 4rem;
-    /* Match existing padding scale, top padding reduced as it follows services section which has bottom padding */
+    padding: 2rem 8rem 10rem 6rem;
 }
 
 .transform-container {
@@ -500,9 +499,8 @@ body {
 
 .transform-image-wrapper img {
     width: 100%;
-    height: auto;
+    height: 700px;
     object-fit: cover;
-    max-height: 550px;
 }
 
 .transform-content {
@@ -517,15 +515,16 @@ body {
     color: #666;
     letter-spacing: 1.5px;
     margin-bottom: 1.5rem;
+    text-transform: uppercase;
 }
 
 .transform-title {
-    font-size: 3.5rem;
+    font-size: 45px;
     font-weight: 700;
     line-height: 1.15;
     color: #333;
     margin-bottom: 2rem;
-    letter-spacing: -1px;
+    letter-spacing: 0.5px;
 }
 
 .transform-title .highlight-orange {
@@ -540,30 +539,37 @@ body {
 }
 
 .transform-features {
-    display: flex;
-    gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 4rem;
 }
 
 .feature-item {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-areas: 
+        "icon title"
+        "icon desc";
+    grid-template-columns: min-content 1fr;
+    column-gap: 1.5rem;
+    align-items: start;
 }
 
 .feature-icon {
-    margin-bottom: 1.5rem;
+    grid-area: icon;
     display: flex;
 }
 
 .feature-title {
+    grid-area: title;
     font-size: 1.25rem;
     font-weight: 700;
     color: #222;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     letter-spacing: -0.5px;
 }
 
 .feature-desc {
+    grid-area: desc;
     font-size: 0.95rem;
     color: #888;
     line-height: 1.7;
@@ -704,10 +710,16 @@ body {
 
 /* --- Story Section --- */
 .story-section {
+    background-color: #ffffff;
+    padding: 2rem 8rem 6rem 8rem;
+}
+
+.story-container {
     display: flex;
-    background-color: #f7f3ee;
-    /* matching the image beige tone */
-    min-height: 600px;
+    align-items: center;
+    gap: 6rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .story-image {
@@ -717,15 +729,15 @@ body {
 
 .story-image img {
     width: 100%;
-    height: 100%;
+    height: 700px;
     object-fit: cover;
 }
 
 .story-content-wrapper {
-    flex: 1;
+    flex: 1.1;
     display: flex;
     align-items: center;
-    padding: 6rem 8rem 6rem 6rem;
+    padding: 0;
 }
 
 .story-content {
@@ -742,12 +754,12 @@ body {
 }
 
 .story-title {
-    font-size: 3.5rem;
+    font-size: 45px;
     font-weight: 700;
     line-height: 1.15;
     color: #333;
     margin-bottom: 2rem;
-    letter-spacing: -1px;
+    letter-spacing: 0.5px;
 }
 
 .story-title .highlight-orange {
@@ -821,11 +833,11 @@ body {
 }
 
 .testimonials-title {
-    font-size: 3.5rem;
+    font-size: 45px;
     font-weight: 700;
     line-height: 1.15;
     color: #333;
-    letter-spacing: -1px;
+    letter-spacing: 0.5px;
 }
 
 .testimonials-title .highlight-orange {
@@ -944,12 +956,12 @@ body {
 }
 
 .contact-title {
-    font-size: 3.5rem;
+    font-size: 45px;
     font-weight: 700;
     line-height: 1.15;
     color: #222;
     margin-bottom: 2rem;
-    letter-spacing: -1px;
+    letter-spacing: 0.5px;
     margin-top: -10px;
 }
 
@@ -1231,4 +1243,43 @@ body {
 .developer .font-semibold {
     color: #ffffff;
     font-weight: 600;
+}
+
+/* --- Smooth Scroll Animation --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered animation for grid items */
+.services-grid .service-card:nth-child(1) { transition-delay: 0.1s; }
+.services-grid .service-card:nth-child(2) { transition-delay: 0.2s; }
+.services-grid .service-card:nth-child(3) { transition-delay: 0.3s; }
+.services-grid .service-card:nth-child(4) { transition-delay: 0.4s; }
+
+.transform-features .feature-item:nth-child(1) { transition-delay: 0.2s; }
+.transform-features .feature-item:nth-child(2) { transition-delay: 0.3s; }
+.transform-features .feature-item:nth-child(3) { transition-delay: 0.4s; }
+.transform-features .feature-item:nth-child(4) { transition-delay: 0.5s; }
+
+.testimonials-grid .testimonial-card:nth-child(1) { transition-delay: 0.1s; }
+.testimonials-grid .testimonial-card:nth-child(2) { transition-delay: 0.2s; }
+.testimonials-grid .testimonial-card:nth-child(3) { transition-delay: 0.3s; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .reveal {
+        transform: translateY(30px);
+    }
+    
+    .transform-features {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
 }
