@@ -449,6 +449,77 @@ body {
 }
 
 
+/* --- Latest YouTube Videos Section --- */
+.youtube-section {
+    background-color: #ffffff;
+    padding: 5rem 6rem;
+}
+
+.youtube-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.youtube-left {
+    flex: 0 0 280px;
+}
+
+.youtube-heading {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.youtube-desc {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.btn-youtube {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    background-color: var(--primary-orange);
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-youtube:hover {
+    background-color: #d66a1a;
+}
+
+.youtube-right {
+    flex: 1;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.youtube-video {
+    flex: 1;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    aspect-ratio: 16 / 10;
+}
+
+.youtube-video iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
 /* --- Transform Spaces Section --- */
 .transform-section {
     background-color: #ffffff;
@@ -1377,40 +1448,74 @@ body {
 
 /* 1200px (Laptops & Small Desktops) */
 @media (max-width: 1200px) {
-    .main-title { font-size: 4.5rem; }
-    .header { padding: 1.5rem 2rem; }
-    .main-content { padding: 0 2rem; }
-    
-    .services-section { padding: 8rem 4rem 4rem 2rem; }
-    .trusted-section { padding: 6rem 4rem; }
-    .story-section { padding: 2rem 4rem 4rem 4rem; }
-    .contact-section { padding: 5rem 4rem; }
-    .footer-container, .footer-bottom-container { padding: 0 2rem; }
-    
-    .trusted-logos { gap: 2rem; }
+    .main-title {
+        font-size: 4.5rem;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+
+    .main-content {
+        padding: 0 2rem;
+    }
+
+    .services-section {
+        padding: 8rem 4rem 4rem 2rem;
+    }
+
+    .trusted-section {
+        padding: 6rem 4rem;
+    }
+
+    .story-section {
+        padding: 2rem 4rem 4rem 4rem;
+    }
+
+    .contact-section {
+        padding: 5rem 4rem;
+    }
+
+    .footer-container,
+    .footer-bottom-container {
+        padding: 0 2rem;
+    }
+
+    .trusted-logos {
+        gap: 2rem;
+    }
 }
 
 /* 992px (Tablets) */
 @media (max-width: 992px) {
+
     /* Header & Mobile Menu */
-    .menu-toggle { display: block; }
-    .header-right { display: none; }
-    
-    .header { position: relative; }
-    
+    .menu-toggle {
+        display: block;
+    }
+
+    .header-right {
+        display: none;
+    }
+
+    .header {
+        position: relative;
+    }
+
     .navbar {
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
         height: auto;
-        background-color: #121822; /* Dark navy resembling the uploaded image */
+        background-color: #121822;
+        /* Dark navy resembling the uploaded image */
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         padding: 2.5rem 0;
-        
+
         /* Dropdown transition */
         opacity: 0;
         visibility: hidden;
@@ -1419,22 +1524,22 @@ body {
         z-index: 999;
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     }
-    
-    .navbar.active { 
+
+    .navbar.active {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
     }
-    
-    .navbar ul { 
-        flex-direction: column; 
-        gap: 2rem; 
-        text-align: center; 
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
         width: 100%;
     }
-    
-    .navbar a { 
-        font-size: 1.15rem; 
+
+    .navbar a {
+        font-size: 1.15rem;
         font-weight: 600;
         color: #f7f7f7;
         display: block;
@@ -1446,111 +1551,313 @@ body {
         align-items: flex-start;
         gap: 3rem;
     }
-    .right-bottom { max-width: 100%; }
-    
-    .services-grid { grid-template-columns: repeat(2, 1fr); }
-    .services-desc { position: relative; bottom: 0; width: 100%; margin-top: 1rem; }
-    .services-header { margin-bottom: 3rem; }
-    
-    .transform-container, .story-container, .contact-container {
+
+    .right-bottom {
+        max-width: 100%;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-desc {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .services-header {
+        margin-bottom: 3rem;
+    }
+
+    .youtube-container { flex-direction: column; text-align: center; }
+    .youtube-left { flex: none; width: 100%; }
+    .youtube-right { width: 100%; }
+    .youtube-section { padding: 4rem 2rem; }
+
+    .transform-container,
+    .story-container,
+    .contact-container {
         flex-direction: column;
         gap: 3rem;
     }
-    
-    .transform-image-wrapper { width: 100%; }
-    .transform-image-wrapper img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
-    .story-image { order: -1; width: 100%; }
-    .story-image img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
-    
-    .subscribe-container { flex-direction: column; text-align: left; align-items: flex-start; }
-    .subscribe-title { font-size: 2.3rem; }
-    .subscribe-form-area { width: 100%; }
-    
-    .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
-    
-    .contact-left { max-width: 100%; }
-    
-    .footer-container { flex-direction: column; gap: 3rem; padding-bottom: 3rem; }
-    .col-logo, .col-contact, .col-links, .col-social { width: 100%; padding-right: 0; }
+
+    .transform-image-wrapper {
+        width: 100%;
+    }
+
+    .transform-image-wrapper img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+    }
+
+    .story-image {
+        order: -1;
+        width: 100%;
+    }
+
+    .story-image img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+    }
+
+    .subscribe-container {
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .subscribe-title {
+        font-size: 2.3rem;
+    }
+
+    .subscribe-form-area {
+        width: 100%;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-left {
+        max-width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .col-logo,
+    .col-contact,
+    .col-links,
+    .col-social {
+        width: 100%;
+        padding-right: 0;
+    }
 }
 
 /* 768px (Mobile Landscape) */
 @media (max-width: 768px) {
-    .main-title { font-size: 3.5rem; }
-    .experience .number { font-size: 8rem; }
-    
-    .services-section { padding: 4rem 2rem; }
-    .services-title { padding-left: 0; }
-    .services-grid { grid-template-columns: 1fr; }
-    .service-card { padding: 3rem 1.5rem; }
-    
-    .trusted-section { padding: 4rem 2rem; }
-    .trusted-container { flex-direction: column; align-items: flex-start; gap: 2rem; }
-    .trusted-logos { justify-content: flex-start; }
-    
-    .transform-section { padding: 2rem 2rem 5rem 2rem; }
-    .transform-features { grid-template-columns: 1fr; gap: 2.5rem; }
-    
-    .story-section { padding: 2rem 2rem 4rem 2rem; }
-    .story-stats { grid-template-columns: 1fr; gap: 2rem; }
-    
-    .testimonials-section { padding: 4rem 2rem; }
-    .testimonials-grid { grid-template-columns: 1fr; }
-    .testimonial-card { padding: 2rem 1.5rem; }
-    
-    .video-section { padding: 0 2rem; }
-    .video-wrapper img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
-    
-    .contact-section { padding: 4rem 2rem; }
-    .form-row { flex-direction: column; gap: 1.5rem; }
-    
-    .reveal { transform: translateY(30px); }
-    
-    .footer-section { padding-top: 3.5rem; }
+    .main-title {
+        font-size: 3.5rem;
+    }
+
+    .experience .number {
+        font-size: 8rem;
+    }
+
+    .services-section {
+        padding: 4rem 2rem;
+    }
+
+    .services-title {
+        padding-left: 0;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 3rem 1.5rem;
+    }
+
+    .trusted-section {
+        padding: 4rem 2rem;
+    }
+
+    .trusted-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .trusted-logos {
+        justify-content: flex-start;
+    }
+
+    .transform-section {
+        padding: 2rem 2rem 5rem 2rem;
+    }
+
+    .transform-features {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .story-section {
+        padding: 2rem 2rem 4rem 2rem;
+    }
+
+    .story-stats {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .testimonials-section {
+        padding: 4rem 2rem;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .video-section {
+        padding: 0 2rem;
+    }
+
+    .video-wrapper img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+
+    .contact-section {
+        padding: 4rem 2rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .reveal {
+        transform: translateY(30px);
+    }
+
+    .footer-section {
+        padding-top: 3.5rem;
+    }
 }
 
 /* 480px (Mobile Portrait) */
 @media (max-width: 480px) {
-    .header { padding: 1.2rem; }
-    .main-title { font-size: 2.8rem; }
-    .left-bottom { flex-direction: column; align-items: flex-start; gap: 2rem; }
-    .experience .number { font-size: 6rem; }
-    .experience .exp-text { font-size: 1.2rem; }
-    .presentation { width: 150px; height: 150px; }
-    .circle-text svg { width: 150px; height: 150px; }
-    
-    .services-title { font-size: 26px; }
-    .transform-title, .story-title, .testimonials-title, .contact-title { font-size: 36px; }
-    .subscribe-title { font-size: clamp(1.4rem, 8vw, 2rem); margin-bottom: 1.5rem; line-height: 1.3; }
-    
-    .subscribe-form { 
-        flex-direction: row; 
-        padding: 6px; 
-        border-radius: 8px; 
-        background-color: #fff; 
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02); 
+    .header {
+        padding: 1.2rem;
     }
-    .input-wrapper { 
-        padding: 5px 10px; 
-        margin-bottom: 0; 
-        flex: 1; 
+
+    .main-title {
+        font-size: 2.8rem;
     }
-    .btn-subscribe { 
-        width: auto; 
-        padding: 0 1.2rem; 
-        height: 44px; 
-        font-size: 0.95rem; 
+
+    .left-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
     }
-    
-    .btn-send { width: 100%; }
-    
-    .transform-image-wrapper img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
-    .story-image img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
-    .trusted-container { align-items: center; text-align: center; }
-    .trusted-title { min-width: auto; margin-bottom: 2rem; }
-    .trusted-logos { justify-content: center; gap: 1.5rem; }
-    .trusted-logos img { max-width: 90px; height: auto; }
-    .trusted-logos img[alt="Confident Group"], 
-    .trusted-logos img[alt="Classic"] { max-width: 130px; }
-    .service-card { padding: 2rem 1.5rem; }
+
+    .experience .number {
+        font-size: 6rem;
+    }
+
+    .experience .exp-text {
+        font-size: 1.2rem;
+    }
+
+    .presentation {
+        width: 150px;
+        height: 150px;
+    }
+
+    .circle-text svg {
+        width: 150px;
+        height: 150px;
+    }
+
+    .services-title {
+        font-size: 26px;
+    }
+
+    .transform-title,
+    .story-title,
+    .testimonials-title,
+    .contact-title {
+        font-size: 36px;
+    }
+
+    .subscribe-title {
+        font-size: clamp(1.4rem, 8vw, 2rem);
+        margin-bottom: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .subscribe-form {
+        flex-direction: row;
+        padding: 6px;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    }
+
+    .input-wrapper {
+        padding: 5px 10px;
+        margin-bottom: 0;
+        flex: 1;
+    }
+
+    .btn-subscribe {
+        width: auto;
+        padding: 0 1.2rem;
+        height: 44px;
+        font-size: 0.95rem;
+    }
+
+    .btn-send {
+        width: 100%;
+    }
+
+    .transform-image-wrapper img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+    }
+
+    .story-image img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+    }
+
+    .trusted-container {
+        align-items: center;
+        text-align: center;
+    }
+
+    .trusted-title {
+        min-width: auto;
+        margin-bottom: 2rem;
+    }
+
+    .trusted-logos {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .trusted-logos img {
+        max-width: 90px;
+        height: auto;
+    }
+
+    .trusted-logos img[alt="Confident Group"],
+    .trusted-logos img[alt="Classic"] {
+        max-width: 130px;
+    }
+
+    .service-card {
+        padding: 2rem 1.5rem;
+    }
 }
